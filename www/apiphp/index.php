@@ -3,7 +3,7 @@
     ini_set('display_errors', 1);
 
     try {
-        $mysql = new PDO("mysql:dbname=localia;host=localhost", "root", "");
+        $mysql = new PDO("mysql:dbname=localia;host=172.16.205.57:3329", "root", "");
         $mysql->exec("set names utf8");
         $mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
