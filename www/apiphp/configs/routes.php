@@ -2,19 +2,19 @@
 return array(
 	"get" => array(
 		"getLocales" => array(
-			"route" => "localia/www/apiphp/getLocales",
+			"route" => "testDist/www/apiphp/getLocales",
 			"resource" => "locales",
 			"action" => "getLocales"
 		),
 
 		"getCategorias" => array(
-			"route" => "localia/www/apiphp/getCategorias",
+			"route" => "testDist/www/apiphp/getCategorias",
 			"resource" => "categorias",
 			"action" => "getCategorias"
 		),
 
 		"getImagenes" => array(
-			"route" => "localia/www/apiphp/getImagenes",
+			"route" => "testDist/www/apiphp/getImagenes",
 			"resource" => "imagenes",
 			"action" => "getImagenes"
 		),
