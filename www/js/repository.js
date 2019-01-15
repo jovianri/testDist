@@ -1,6 +1,6 @@
 class Repository {
 
-    constructor(url = window.location.href + 'apiphp/') {
+    constructor(url = window.location.href + 'www/apiphp/') {
         this.url = url;
     }
 
