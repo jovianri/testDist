@@ -1,6 +1,6 @@
 class Repository {
 
-    constructor(url = 'http://localhost/localia/www/apiphp/') {
+    constructor(url = window.location.href + 'apiphp/') {
         this.url = url;
     }
 
