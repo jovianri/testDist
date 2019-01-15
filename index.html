@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Localia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="./www/vendor/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link href="./www/vendor/fontawesome/css/all.css" rel="stylesheet">
+    <link href="./www/css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="body" style="font-family:'Raleway'">
+    <div class="l-landing-page" id="main-container">
+        <div class="l-landing-page__header">
+
+            <div class="menu">
+                <div class="menu__item menu__item--logo"></div>
+                <div class="menu__item menu__item--default">
+
+                    <main>
+                        <form class="form form--style" v-on:submit.prevent="buscar" action="/index.html">
+                            <i class="fas fa-search"></i>
+                            <input type="text" class="i-Busqueda" v-model="ciudad" placeholder="Lugares.." name="search" maxlength="50" id="ciudadBuscar">
+                            <input type="submit" value="Buscar"></input>
+                        </form>
+                    </main>
+
+                </div>
+                <div class="menu__item"> Opción 1</div>
+                <div class="menu__item" data-toggle="modal" data-target="#registrar"> Registrar</div>
+                <div class="menu__item" data-toggle="modal" data-target="#login"> Login</div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="login" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Log in</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Entrar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="registrar" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Registrar</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input type="password" class="form-control" name="passwordRe" placeholder="Contraseña">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">Nombre</span>
+                                <input type="text" class="form-control" name="msg" placeholder="Nombre del usuario">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Registrar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="l-landing-page__content l-landing-page__content--style">
+
+            <div class="grid grid--1col" id="content-container">
+
+                <div class="grid--area1">
+
+                    <div class="card" id="cardOne">
+                        <div class="slider">
+                            <!-- Made with Bootstrap -->
+                            <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+                                <!-- Overlay -->
+                                <div class="overlay"></div>
+
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#bs-carousel" data-slide-to="1"></li>
+                                    <li data-target="#bs-carousel" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item slides active">
+                                        <div class="slide-1"></div>
+                                        <div class="hero">
+                                            <hgroup>
+                                                <h1>Organiza tus eventos</h1>
+                                                <h3>Sin papeleos, sin historias</h3>
+                                            </hgroup>
+                                            <button class="btn btn-hero btn-lg" role="button">Alquila ya</button>
+                                        </div>
+                                    </div>
+                                    <div class="item slides">
+                                        <div class="slide-2"></div>
+                                        <div class="hero">
+                                            <hgroup>
+                                                <h1>A tu medida</h1>
+                                                <h3>Elije entre una amplia gama de locales</h3>
+                                            </hgroup>
+                                            <button class="btn btn-hero btn-lg" role="button">Quiero verlo</button>
+                                        </div>
+                                    </div>
+                                    <div class="item slides">
+                                        <div class="slide-3"></div>
+                                        <div class="hero">
+                                            <hgroup>
+                                                <h1>Miles de locales</h1>
+                                                <h3>A sólo un clic</h3>
+                                            </hgroup>
+                                            <button class="btn btn-hero btn-lg" role="button">Ver alquileres</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid--area2">
+
+                    <div class="card" id="cardTwo">
+                        <div class="lastSeen">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="l-landing-page__footer">
+            <div class="flex flex--footer flex--espaciado">
+
+                <ul class="submenu">
+                    <li class="submenu__item submenu__item--titulo">Lorem</li>
+                    <li class="submenu__item">Ipsum</li>
+                    <li class="submenu__item">Dolor</li>
+                    <li class="submenu__item">Sit</li>
+                </ul>
+
+                <ul class="submenu">
+                    <li class="submenu__item submenu__item--titulo">Lorem</li>
+                    <li class="submenu__item">Ipsum</li>
+                    <li class="submenu__item">Dolor</li>
+                    <li class="submenu__item">Sit</li>
+                </ul>
+
+                <ul class="submenu">
+                    <li class="submenu__item submenu__item--titulo">Lorem</li>
+                    <li class="submenu__item">Ipsum</li>
+                    <li class="submenu__item">Dolor</li>
+                    <li class="submenu__item">Sit</li>
+                </ul>
+
+                <ul class="submenu">
+                    <li class="submenu__item submenu__item--titulo">Lorem</li>
+                    <li class="submenu__item">Ipsum</li>
+                    <li class="submenu__item">Dolor</li>
+                    <li class="submenu__item">Sit</li>
+                </ul>
+
+            </div>
+
+            <div class="flex flex--horizontal">
+                <ul class="submenu--social-networks">
+                    <li class="submenu__item submenu__item--inline"><a href="#" class="icon icon--instagram fab fa-instagram"></a></li>
+                    <li class="submenu__item submenu__item--inline"><a href="#" class="icon icon--facebook fab fa-facebook-f"></a>
+                    <li class="submenu__item submenu__item--inline"><a href="#" class="icon icon--twitter fab fa-twitter"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./www/vendor/vue/vue.js"></script><!--  VueJS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script><!-- Axios Ajax connection -->
+    <script src="./www/vendor/jquery/jquery-3.3.1.min.js"></script><!--  JQuery -->
+    <script src="./www/vendor/bootstrap-3.2.0/js/bootstrap.min.js"></script><!--  Boostrap JS -->
+    <script src="./www/js/repository.js"></script>
+    <script src="./www/js/main.js"></script>
+</body>
+
+</html>
